@@ -272,6 +272,13 @@ class MainActivity : ComponentActivity() {
                     RadioButton(
                         selected = radioChecked.value,
                         onClick = { radioChecked.value = !radioChecked.value })
+
+                    val rangeValue = remember { mutableFloatStateOf(0f) }
+
+                    Slider(
+                        value = rangeValue.floatValue,
+                        onValueChange = { rangeValue.floatValue = it }
+                    )
                 }
             }
         }

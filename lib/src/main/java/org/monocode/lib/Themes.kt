@@ -24,28 +24,41 @@ private fun getMaterialPanther(accent: MonoColor): ColorScheme {
     val accentColor = accent.toColor()
     val redColor = getPantherColor(ColorId.Red).toColor()
 
-    return darkColorScheme(
+    val factor = 0.6f
+    val darkerAccentColor = accentColor.copy(
+        red = accentColor.red * factor,
+        green = accentColor.green * factor,
+        blue = accentColor.blue * factor
+    )
+
+    val darkerErrorColor = redColor.copy(
+        red = redColor.red * factor,
+        green = redColor.green * factor,
+        blue = redColor.blue * factor
+    )
+
+    return lightColorScheme(
         // Accent Colors
         primary = accentColor,
         onPrimary = n0Color,
-        primaryContainer = accentColor,
+        primaryContainer = darkerAccentColor,
         onPrimaryContainer = n0Color,
 
         inversePrimary = accentColor,
 
         secondary = accentColor,
         onSecondary = n0Color,
-        secondaryContainer = accentColor,
+        secondaryContainer = darkerAccentColor,
         onSecondaryContainer = n0Color,
 
         tertiary = accentColor,
         onTertiary = n0Color,
-        tertiaryContainer = accentColor,
+        tertiaryContainer = darkerAccentColor,
         onTertiaryContainer = n0Color,
 
         error = redColor,
         onError = n0Color,
-        errorContainer = redColor,
+        errorContainer = darkerErrorColor,
         onErrorContainer = n0Color,
 
         // Neutral Colors
@@ -54,8 +67,8 @@ private fun getMaterialPanther(accent: MonoColor): ColorScheme {
 
         surface = n2Color,
         surfaceTint = n2Color,
-        surfaceBright = n4Color,
-        surfaceDim = n2Color,
+        surfaceBright = n2Color,
+        surfaceDim = n4Color,
         surfaceContainerLowest = n0Color,
         surfaceContainerLow = n1Color,
         surfaceContainer = n2Color,
@@ -86,28 +99,41 @@ private fun getMaterialLynx(accent: MonoColor): ColorScheme {
     val accentColor = accent.toColor()
     val redColor = getLynxColor(ColorId.Red).toColor()
 
+    val factor = 0.4f
+    val darkerAccentColor = accentColor.copy(
+        red = accentColor.red * factor,
+        green = accentColor.green * factor,
+        blue = accentColor.blue * factor
+    )
+
+    val darkerErrorColor = redColor.copy(
+        red = redColor.red * factor,
+        green = redColor.green * factor,
+        blue = redColor.blue * factor
+    )
+
     return lightColorScheme(
         // Accent Colors
         primary = accentColor,
         onPrimary = n0Color,
-        primaryContainer = accentColor,
+        primaryContainer = darkerAccentColor,
         onPrimaryContainer = n0Color,
 
         inversePrimary = accentColor,
 
         secondary = accentColor,
         onSecondary = n0Color,
-        secondaryContainer = accentColor,
+        secondaryContainer = darkerAccentColor,
         onSecondaryContainer = n0Color,
 
         tertiary = accentColor,
         onTertiary = n0Color,
-        tertiaryContainer = accentColor,
+        tertiaryContainer = darkerAccentColor,
         onTertiaryContainer = n0Color,
 
         error = redColor,
         onError = n0Color,
-        errorContainer = redColor,
+        errorContainer = darkerErrorColor,
         onErrorContainer = n0Color,
 
         // Neutral Colors

@@ -19,8 +19,10 @@ fun MonoCodeMaterialTheme(
     themeId: ThemeId,
     content: @Composable () -> Unit
 ) {
+
     MaterialTheme(
         colorScheme = getMaterialMonoCode(themeId),
+//        colorScheme = dynamicLightColorScheme(LocalContext.current),
         typography = Typography,
         content = content
     )

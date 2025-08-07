@@ -32,9 +32,10 @@ dependencies {
 
 # Usage
 Get the material theme:
-```
+```kotlin
 val theme = getMaterialMonoCode(ThemeId.PantherYellow)
 ```
+> You can use other colors like PantherBlue, LynxOrange
 
 # Maintainers
 🐈‍⬛ lighttigerXIV
